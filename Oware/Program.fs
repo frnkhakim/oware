@@ -31,8 +31,25 @@ type board = {
 
 
 
-let getSeeds n board = failwith "Not implemented"
-//i am worked only with frank
+let getSeeds n board = 
+    match n with
+       |1 ->board.a
+       |2 ->board.b
+       |3 ->board.c
+       |4 ->board.d
+       |5 ->board.e
+       |6 ->board.f
+
+       |7 ->board.g
+       |8 ->board.h
+       |9 ->board.i
+       |10->board.j
+       |11->board.k
+       |12->board.l
+
+       //if value is not within the numbers of 1 to 12
+       |_-> failwith" not within the bounds of the game"
+
 let useHouse n board = failwith "Not implemented"
 
 //initial position of all players
