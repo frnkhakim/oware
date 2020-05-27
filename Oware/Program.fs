@@ -78,7 +78,15 @@ let start position ={
 
 let score board = failwith "Not implemented"
 
-let gameState board = failwith "Not implemented"
+let gameState board = 
+    match (board.south_points >=25,board.north_points>=25,(board.south_points = 24 && board.north_points =24)) with
+        |true,true,_-> "Game ended in a draw"
+        |_,_,true-> "Game ended in a draw"
+        |true,false,_->"South won"
+        |false,true,_->"North won"
+        |false,false,_-> match board.turn with
+                            |South -> "South's turn"
+                            |North -> "North's turn"
 
 [<EntryPoint>]
 let main _ =
