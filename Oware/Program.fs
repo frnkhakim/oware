@@ -76,7 +76,7 @@ let start position ={
 
 }
 
-let score board = failwith "Not implemented"
+let score board = (board.north_points, board.south_points)
 
 let gameState board = 
     match (board.south_points >=25,board.north_points>=25,(board.south_points = 24 && board.north_points =24)) with
