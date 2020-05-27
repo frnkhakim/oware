@@ -5,7 +5,7 @@ type StartingPosition =
     | North
 
 let getSeeds n board = failwith "Not implemented"
-
+//i am worked only with frank
 let useHouse n board = failwith "Not implemented"
 
 let start position = failwith "Not implemented"
