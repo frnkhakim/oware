@@ -13,12 +13,12 @@ type board = {
     e:int;
     f:int;
 
-    g:int;
-    h:int;
-    i:int;
-    j:int;
-    k:int;
-    l:int;
+    a':int;
+    b':int;
+    c':int;
+    d':int;
+    e':int;
+    f':int;
 
     north_points:int;
     south_points:int;
@@ -40,12 +40,12 @@ let getSeeds n board =
        |5 ->board.e
        |6 ->board.f
 
-       |7 ->board.g
-       |8 ->board.h
-       |9 ->board.i
-       |10->board.j
-       |11->board.k
-       |12->board.l
+       |7 ->board.a'
+       |8 ->board.b'
+       |9 ->board.c'
+       |10->board.d'
+       |11->board.e'
+       |12->board.f'
 
        //if value is not within the numbers of 1 to 12
        |_-> failwith" not within the bounds of the game"
@@ -62,15 +62,15 @@ let start position ={
     e = 4;
     f = 4;
 
-    g = 4;
-    h = 4;
-    i = 4;
-    j = 4;
-    k = 4;
-    l = 4;
+    a' = 4;
+    b' = 4;
+    c' = 4;
+    d' = 4;
+    e' = 4;
+    f' = 4;
 
-    north_points = 4;
-    south_points = 4;
+    north_points = 0;
+    south_points = 0;
 
     turn = position;
 
